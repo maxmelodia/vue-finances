@@ -1,0 +1,13 @@
+#Funciona como interface para o Graphql-yoga. Ou seja, o que o Graphql-yoga precisa expor para as aplicações client.
+
+type Query { # RootType = Query, Mutation e Subscribe
+  #RootFields = Campos de nível raíz  
+  user(id: ID): User
+}
+
+type User {
+  id: ID!
+  name: String!
+  email: String!
+  password: String! 
+}
