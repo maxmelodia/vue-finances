@@ -6,6 +6,15 @@ type Query { # RootType = Query, Mutation e Subscribe
   #RootFields = Campos de nível raíz  
   accounts: [ Account! ]!
   categories(operation: Operation): [ Category!] !
+  records(
+    """
+      Month and Year, format "MM-YYYY" e.g.: 07-2020
+    """    
+    month: String,
+    type: Operation,
+    accountsIds: [ ID! ],
+    categoriesIds: [ ID! ]
+  ): [ Record! ]!
   user: User
 }
 
