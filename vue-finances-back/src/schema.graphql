@@ -16,6 +16,11 @@ type Query { # RootType = Query, Mutation e Subscribe
     categoriesIds: [ ID! ]
   ): [ Record! ]!
   user: User
+
+  """
+    Year, Month and Day, format "YYYY-MM-DD" e.g.: 2020-07-21
+  """    
+  totalBalance(date: Date!): Float
 }
 
 type Mutation {
